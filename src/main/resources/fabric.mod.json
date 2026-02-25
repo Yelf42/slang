@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "slang",
+	"version": "${version}",
+	"name": "Slang",
+	"description": "A remate of the core puzzle feature from Lingo",
+	"authors": [
+		"Yelf42"
+	],
+	"license": "CC0-1.0",
+	"icon": "icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"yelf42.slang.Slang"
+		],
+		"client": [
+			"yelf42.slang.SlangClient"
+		]
+	},
+	"mixins": [
+		"slang.mixins.json",
+		{
+			"config": "slang.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
