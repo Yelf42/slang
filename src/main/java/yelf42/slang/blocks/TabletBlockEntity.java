@@ -192,6 +192,11 @@ public class TabletBlockEntity extends BlockEntity {
         } else {
             this.level.setBlock(this.getBlockPos(), this.getBlockState().setValue(TabletBlock.STATE, TabletState.WRONG), 3);
         }
+
+        BlockState state = this.getBlockState();
+        if (state.getBlock() instanceof TabletBlock tabletBlock) {
+            tabletBlock.updateNeighbours(state, this.level, this.getBlockPos());
+        }
     }
 
     public TabletText getText() {

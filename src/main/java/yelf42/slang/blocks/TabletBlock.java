@@ -7,6 +7,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.common.ClientboundCustomPayloadPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
@@ -28,6 +29,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.redstone.ExperimentalRedstoneUtils;
+import net.minecraft.world.level.redstone.Orientation;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -188,12 +191,35 @@ public class TabletBlock extends BaseEntityBlock {
         return blockState.getValue(FACING).toYRot();
     }
 
-    protected boolean hasAnalogOutputSignal(BlockState blockState) {
+    protected int getSignal(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, Direction direction) {
+        return blockState.getValueOrElse(STATE, TabletState.EMPTY) == TabletState.RIGHT ? 15 : 0;
+    }
+
+    protected int getDirectSignal(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, Direction direction) {
+        return (blockState.getValueOrElse(STATE, TabletState.EMPTY) == TabletState.RIGHT) && blockState.getValue(FACING) == direction ? 15 : 0;
+    }
+
+    protected boolean isSignalSource(BlockState blockState) {
         return true;
     }
 
-    protected int getAnalogOutputSignal(BlockState blockState, Level level, BlockPos blockPos, Direction direction) {
-        return level.getBlockState(blockPos).getValueOrElse(TabletBlock.STATE, TabletState.EMPTY) == TabletState.RIGHT ? 15 : 0;
+    protected void affectNeighborsAfterRemoval(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, boolean bl) {
+        if (!bl && (blockState.getValueOrElse(STATE, TabletState.EMPTY) == TabletState.RIGHT)) {
+            this.updateNeighbours(blockState, serverLevel, blockPos);
+        }
+    }
+
+    public void updateNeighbours(BlockState blockState, Level level, BlockPos blockPos) {
+        Direction direction = blockState.getValue(FACING).getOpposite();
+        Orientation orientation = ExperimentalRedstoneUtils.initialOrientation(level, direction, blockState.getValue(FACING));
+        level.updateNeighborsAt(blockPos, this, orientation);
+        level.updateNeighborsAt(blockPos.relative(direction), this, orientation);
+        if (this.isBig()) {
+            BlockState state = level.getBlockState(getVoidPos(blockPos, blockState));
+            if (state.getBlock() instanceof TabletVoidBlock tabletVoidBlock) {
+                tabletVoidBlock.updateNeighbours(state, level, getVoidPos(blockPos, blockState));
+            }
+        }
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

@@ -18,7 +18,7 @@ public class ModItems {
         Slang.LOGGER.info("Initializing items for " + Slang.MOD_ID);
     }
 
-    public static final Item SLANG_TOOL = register("slang_tool", Item::new, new Item.Properties().rarity(Rarity.UNCOMMON));
+    public static final Item SLANG_TOOL = register("slang_tool", Item::new, new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1));
 
     public static Item register(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
         // Create the item key.
