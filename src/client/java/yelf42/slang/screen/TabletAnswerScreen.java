@@ -18,6 +18,7 @@ import net.minecraft.util.ARGB;
 import net.minecraft.util.FormattedCharSequence;
 import org.joml.Vector3f;
 import org.jspecify.annotations.Nullable;
+import org.lwjgl.glfw.GLFW;
 import yelf42.slang.Slang;
 import yelf42.slang.blocks.TabletBlock;
 import yelf42.slang.blocks.TabletBlockEntity;
@@ -205,7 +206,11 @@ public class TabletAnswerScreen extends Screen {
     }
 
     public boolean keyPressed(KeyEvent keyEvent) {
-
+        if (keyEvent.key() == GLFW.GLFW_KEY_DELETE) {
+            setMessage(this.text.getMessage(this.tablet.getAnswerLine(), false).getString().substring(0,1));
+            this.signField.setCursorToEnd();
+            return true;
+        }
         return this.signField.keyPressed(keyEvent) ? true : super.keyPressed(keyEvent);
     }
 

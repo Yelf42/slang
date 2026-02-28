@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "slang:tablet_1_big"
+  ],
+  "result": {
+    "count": 1,
+    "id": "slang:tablet_2_big"
+  }
+}

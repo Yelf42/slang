@@ -168,6 +168,7 @@ public class TabletBlockEntity extends BlockEntity {
     }
 
     public void clearAnswer() {
+        if (this.playerWhoMayEdit != null) return;
         this.text = this.text.setMessage(3, Component.empty().withStyle(Slang.STYLE));
         this.updateState();
         this.markUpdated();
