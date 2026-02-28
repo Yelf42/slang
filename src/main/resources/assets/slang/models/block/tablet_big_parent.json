@@ -1,0 +1,40 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"textures": {
+      "edges": "slang:block/big_edges",
+      "particle": "slang:block/edges"
+	},
+	"elements": [
+		{
+			"name": "frame",
+			"from": [0, 0, 0],
+			"to": [32, 16, 2],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#edges"},
+				"east": {"uv": [15, 0, 16, 8], "texture": "#edges"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#edges"},
+				"west": {"uv": [8, 0, 9, 8], "texture": "#edges"},
+				"up": {"uv": [16, 1, 8, 0], "texture": "#edges"},
+				"down": {"uv": [16, 7, 8, 8], "texture": "#edges"}
+			}
+		},
+		{
+			"name": "screen_left",
+			"from": [1, 1, 2],
+			"to": [16, 15, 2],
+			"faces": {
+				"south": {"uv": [0, 0, 15, 14], "texture": "#screen"}
+			}
+		},
+		{
+			"name": "screen_right",
+			"from": [16, 1, 2],
+			"to": [31, 15, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [15, 0, 0]},
+			"faces": {
+				"south": {"uv": [0, 0, 15, 14], "texture": "#screen"}
+			}
+		}
+	]
+}

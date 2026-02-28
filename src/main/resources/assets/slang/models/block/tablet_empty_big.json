@@ -1,0 +1,6 @@
+{
+  "parent": "slang:block/tablet_big_parent",
+  "textures": {
+    "screen": "minecraft:block/black_concrete"
+  }
+}

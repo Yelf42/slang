@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": "minecraft:pink_dye",
+    "B": "minecraft:blue_terracotta",
+    "S": "minecraft:sponge",
+    "R": "minecraft:redstone"
+  },
+  "pattern": [
+    " R ",
+    "PSP",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "slang:eraser"
+  }
+}

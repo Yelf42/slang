@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:blue_terracotta",
+    "A": "minecraft:white_dye",
+    "Q": "minecraft:black_dye"
+  },
+  "pattern": [
+    "#A#",
+    "#Q#",
+    "#Q#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "slang:tablet_1_small"
+  }
+}

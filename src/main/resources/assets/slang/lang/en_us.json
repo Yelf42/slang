@@ -1,6 +1,29 @@
 {
   "itemGroup.slang": "Slang",
 
-  "block.slang.tablet": "Tablet",
-  "item.slang.tablet": "Tablet"
+  "block.slang.tablet_1_small": "Tablet 1",
+  "item.slang.tablet_1_small": "Tablet 1",
+
+  "block.slang.tablet_2_small": "Tablet 2",
+  "item.slang.tablet_2_small": "Tablet 2",
+
+  "block.slang.tablet_3_small": "Tablet 3",
+  "item.slang.tablet_3_small": "Tablet 3",
+
+  "block.slang.tablet_1_big": "Big Tablet 1",
+  "item.slang.tablet_1_big": "Big Tablet 1",
+
+  "block.slang.tablet_2_big": "Big Tablet 2",
+  "item.slang.tablet_2_big": "Big Tablet 2",
+
+  "block.slang.tablet_3_big": "Big Tablet 3",
+  "item.slang.tablet_3_big": "Big Tablet 3",
+
+  "block.slang.eraser": "Chunk Eraser",
+  "item.slang.eraser": "Chunk Eraser",
+
+  "slang.tablet.edit": "Edit Lines",
+  "slang.tablet.answer": "Type Answer",
+
+  "item.slang.slang_tool": "Slang Editing Tool"
 }

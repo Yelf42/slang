@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:blue_terracotta",
+    "T": "slang:tablet_1_small"
+  },
+  "pattern": [
+    "   ",
+    "#T#",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "slang:tablet_1_big"
+  }
+}

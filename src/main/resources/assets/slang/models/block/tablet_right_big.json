@@ -1,5 +1,5 @@
 {
-  "parent": "slang:block/tablet_parent",
+  "parent": "slang:block/tablet_big_parent",
   "textures": {
     "screen": "minecraft:block/lime_concrete"
   }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "minecraft:purple_dye",
+    "C": "minecraft:copper_ingot",
+    "H": "minecraft:stick"
+  },
+  "pattern": [
+    " D ",
+    " C ",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "slang:slang_tool"
+  }
+}

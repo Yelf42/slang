@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,state=empty": {
+      "model": "slang:block/tablet_empty",
+      "y": 180
+    },
+    "facing=north,state=incomplete": {
+      "model": "slang:block/tablet_incomplete",
+      "y": 180
+    },
+    "facing=north,state=wrong": {
+      "model": "slang:block/tablet_wrong",
+      "y": 180
+    },
+    "facing=north,state=right": {
+      "model": "slang:block/tablet_right",
+      "y": 180
+    },
+    "facing=east,state=empty": {
+      "model": "slang:block/tablet_empty",
+      "y": -90
+    },
+    "facing=east,state=incomplete": {
+      "model": "slang:block/tablet_incomplete",
+      "y": -90
+    },
+    "facing=east,state=wrong": {
+      "model": "slang:block/tablet_wrong",
+      "y": -90
+    },
+    "facing=east,state=right": {
+      "model": "slang:block/tablet_right",
+      "y": -90
+    },
+    "facing=south,state=empty": {
+      "model": "slang:block/tablet_empty"
+    },
+    "facing=south,state=incomplete": {
+      "model": "slang:block/tablet_incomplete"
+    },
+    "facing=south,state=wrong": {
+      "model": "slang:block/tablet_wrong"
+    },
+    "facing=south,state=right": {
+      "model": "slang:block/tablet_right"
+    },
+    "facing=west,state=empty": {
+      "model": "slang:block/tablet_empty",
+      "y": 90
+    },
+    "facing=west,state=incomplete": {
+      "model": "slang:block/tablet_incomplete",
+      "y": 90
+    },
+    "facing=west,state=wrong": {
+      "model": "slang:block/tablet_wrong",
+      "y": 90
+    },
+    "facing=west,state=right": {
+      "model": "slang:block/tablet_right",
+      "y": 90
+    }
+  }
+}

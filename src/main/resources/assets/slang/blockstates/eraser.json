@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=true": {
+      "model": "slang:block/eraser_lit"
+    },
+    "lit=false": {
+      "model": "slang:block/eraser_unlit"
+    }
+  }
+}
