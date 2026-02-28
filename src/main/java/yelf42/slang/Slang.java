@@ -27,7 +27,6 @@ import yelf42.slang.registry.ModPackets;
 import java.util.List;
 import java.util.stream.Stream;
 
-
 public class Slang implements ModInitializer {
 	public static final String MOD_ID = "slang";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);

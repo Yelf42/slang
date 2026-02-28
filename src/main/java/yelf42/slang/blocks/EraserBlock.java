@@ -68,6 +68,11 @@ public class EraserBlock extends Block {
         }
     }
 
+    @Override
+    protected boolean isSignalSource(BlockState blockState) {
+        return true;
+    }
+
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(LIT);
     }
